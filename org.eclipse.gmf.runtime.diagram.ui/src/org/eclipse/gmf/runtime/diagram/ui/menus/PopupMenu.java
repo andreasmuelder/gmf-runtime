@@ -138,6 +138,7 @@ public class PopupMenu {
 		}
 
 		if (!menu.isDisposed()) {
+			while (display.readAndDispatch ());
 			menu.dispose();
 
 			if (getResult() != null) {
